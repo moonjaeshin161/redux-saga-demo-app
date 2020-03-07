@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Table } from 'reactstrap'
 import { connect } from 'react-redux';
-import { getUsers } from '../Redux/action'
+import { getUsers } from '../Redux/action';
+import '../styles/users.css'
 
 class Users extends Component {
     componentDidMount() {
@@ -10,7 +11,7 @@ class Users extends Component {
     render() {
         return (
             <>
-                <h1>UsersList</h1>
+                <h1 className='text-title'>UsersList</h1>
                 <Table>
                     <thead>
                         <tr>
@@ -25,7 +26,7 @@ class Users extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.users.map((user, index) => (
+                        {this.props.users && this.props.users.map((user, index) => (
                             <tr key={index}>
                                 <th scope="row">{user.id}</th>
                                 <td>{user.name}</td>
@@ -46,7 +47,7 @@ class Users extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    users: state.Users
+    users: state.Users.users
 })
 
 const mapDispatchToProps = (dispatch) => ({

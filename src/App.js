@@ -10,6 +10,7 @@ import Users from './views/Users/pages/Users';
 import Homepage from './views/Home/pages/homepage';
 import Navigation from './components/Navbar/Navigation';
 import { store } from './redux/store';
+import Posts from './views/Posts/pages/Posts';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Switch>
           <Route path="/users">
             <Users />
+          </Route> <Route path="/posts">
+            <Posts />
           </Route>
           <Route path="/">
             <Homepage />

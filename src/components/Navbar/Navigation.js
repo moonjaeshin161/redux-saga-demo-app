@@ -20,7 +20,7 @@ function Navigation() {
                         <NavLink to="/users" tag={RRNavLink}>Users</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink to="/" tag={RRNavLink}>Posts</NavLink>
+                        <NavLink to="/posts" tag={RRNavLink}>Posts</NavLink>
                     </NavItem>
                 </Nav>
             </Navbar>

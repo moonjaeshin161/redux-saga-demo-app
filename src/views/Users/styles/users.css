@@ -1,0 +1,11 @@
+.text-title{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.pagination{
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    width: 100%
+}
